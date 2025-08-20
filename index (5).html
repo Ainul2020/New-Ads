@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧡❤️ DEVELOPER HD ❤️🧡</title>
+    <script src='//niphaumeenses.net/vignette.min.js' data-zone='8508215' data-sdk='show_8508215'></script>
+    <style>
+        /* Basic Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #007bff;
+            color: #ffffff;
+        }
+        .app-container {
+            text-align: center;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            width: 280px;
+            box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.50);
+            animation: fadeIn 2s ease;
+        }
+        .logo {
+            width: 65px;
+            height: 65px;
+            margin-bottom: -10px;
+        }
+        .username {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+        .balance-info, .reward-counter {
+            margin: 10px 100;
+            font-size: 15px;
+            color: #000000;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.20);
+        }
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        button:active {
+            transform: scale(1.05);
+        }
+        .profile-section {
+            margin-top: 40px;
+            color: #000000;
+            text-align: left;
+        }
+        .profile-section p {
+            margin: 8px 0;
+            color: #0056b3;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body style="background: linear-gradient(270deg, #FF6699 33%, #FF6600 80%);">
+    <div style="background: #d7bde2;"
+    <div class="app-container">
+        <!-- Logo and Username -->
+        <img src="https://firebasestorage.googleapis.com/v0/b/gaming-hub-e9709.appspot.com/o/image_url%2FCC_20241230_180304.png?alt=media&token=49866510-bf25-4963-8139-05b8e420aef2" alt="Logo" class="logo">
+        <h1 class="username">HELLO GUYS </h1>
+        <div style="border-bottom: 1px solid black; margin-bottom: 20px;"> 
+        </div>
+        <!-- Balance and Reward Counter -->
+        <p class="balance-info"><strong>Balance : <span style="color: red;">৳ <span id="balance">0.0</span></span></p>
+
+        <p class="reward-counter"><strong>Total Watch Ads : <span id="reward-count" style="color: red;">0</span></p>
+
+        
+        <!-- Ad Button -->
+        <button onclick="showRewardedAd()">WATCH ADD</button>
+        
+        <!-- Additional Buttons for Withdraw and Task -->
+        <div class="button-container">
+            <button onclick="withdrawBalance()">WITHDRAW</button>
+            <button onclick="window.location.href='helpline.php';">HELPLINE</button>
+        </div><br>
+        <button onclick="document.location='YouDomingnmae/task.html'">Task ইনকাম </button>
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <h3>🫱🏻 CONTACT ME</h3>
+            <div style="border-bottom: 1px solid black; margin-bottom: 10px;"> 
+        </div>
+            <p><strong style="color: black;">NAME:</strong><a href="https://t.me/Website_Developer_VS_HD" style="text-decoration: none; color: #0056b3; font-weight: normal;"> WEBSITE DEVELOPER HD</p>
+            <p><strong style="color: black">EMAIL:</strong><a href="mailto: websitedevelopervshd@gmail.com" style="text-decoration: none; color: #0056b3; font-weight: normal;">websitedevelopervshd@gmail.com</p>
+            <p><strong style="color: black">Telegram ID:</strong><a href="https://t.me/Website_Developer_HD" style="text-decoration: none; color: #0056b3; font-weight: normal;"> @Website_Developer_HD</a></p>
+            </div>
+    </div>
+
+    <script>
+    // রিওয়ার্ড এবং ব্যালেন্সকে Local Storage থেকে লোড করা
+    let rewardCount = parseInt(localStorage.getItem('rewardCount')) || 0;
+    let balance = parseFloat(localStorage.getItem('balance')) || 0.00;
+
+    // বর্তমান রিওয়ার্ড এবং ব্যালেন্স দেখানো
+    document.getElementById('reward-count').textContent = rewardCount;
+    document.getElementById('balance').textContent = balance.toFixed(3);
+
+    function showRewardedAd() {
+        if (typeof show_8508215 === 'function') {
+            show_8508215().then(() => {
+                rewardCount += 1;
+                balance += 0.003;
+
+                // রিওয়ার্ড এবং ব্যালেন্সকে Local Storage-এ সংরক্ষণ করা
+                localStorage.setItem('rewardCount', rewardCount);
+                localStorage.setItem('balance', balance.toFixed(3));
+
+                // আপডেটকৃত রিওয়ার্ড এবং ব্যালেন্স দেখানো
+                document.getElementById('reward-count').textContent = rewardCount;
+                document.getElementById('balance').textContent = balance.toFixed(3);
+                
+            }).catch(error => {
+                console.error('Ad failed to load or display:', error);
+            });
+        } else {
+            console.error('Ad script is not loaded or available.');
+        }
+    }
+
+    function withdrawBalance() {
+        window.location.href = 'withdraw.html';
+    }
+</script>
+
+</body>
+</html>
